@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parabéns!</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css">
 </head>
 <body>
     <ul class="menu">
@@ -17,13 +18,16 @@
 
     <form>
         <label for="Nome">Nome:</label>
-        <input type="text" id="Nome">
+        <input type="text" id="Nome" onkeyup="ValidaNome()">
+        <div id="txtNome"></div>
         <br>
         <label for="Email">E-mail:</label>
-        <input type="email" id="Email">
+        <input type="email" id="Email" onkeyup="ValidaEmail()">
+        <div id="txtEmail"></div>
         <br>
-        <label for="CPF">CPF:</label>
-        <input type="text" id="CPF">
+        <label for="CPF (Somente os Números)">CPF:</label>
+        <input type="text" id="CPF" onkeyup="ValidaCPF()">
+        <div id="txtCPF"></div>
         <br>
         <label for="Cartao">Número do Cartão:</label>
         <input type="text" id="Cartao">
@@ -33,7 +37,8 @@
         <br>
         <label for="Codigo">Código de segurança:</label>
         <input type="text" id="Codigo">
-        <button>RECEBER IPHONE</button>
+        <button onclick="enviar()">RECEBER IPHONE</button>
     </form>
+    <script src="Assets/Js/script.js"></script>
 </body>
 </html>
